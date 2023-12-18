@@ -17,3 +17,23 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('posts', function () {
+    return response(['Post 1', 'Post 2', 'Post 3'],200);
+});
+Route::get('posts/{post}', function ($postId) {
+    return response()->json(['productId' => "{$postId}"], 200);
+});
+ 
+Route::post('posts', function() {
+    return  response()->json([
+            'message' => 'Create success'
+        ], 201);
+});
+Route::put('posts/{post}', function() {
+	return  response()->json([
+            'message' => 'Update success'
+        ], 200);
+});
+Route::delete('posts/{post}',function() {
+	return  response()->json(null, 204);
+});
