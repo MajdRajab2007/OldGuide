@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,23 +18,28 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//
 Route::get('posts', function () {
-    return response(['Post 1', 'Post 2', 'Post 3'],200);
+    return response(Post::all(),200);
 });
 Route::get('posts/{post}', function ($postId) {
-    return response()->json(['productId' => "{$postId}"], 200);
+    return response()->json(Post::find($postId), 200);
 });
  
-Route::post('posts', function() {
-    return  response()->json([
-            'message' => 'Create success'
-        ], 201);
+Route::post('posts', function(Request $request) {
+    $new_post = Post::create($request->all());
+    return $new_post;
 });
-Route::put('posts/{post}', function() {
-	return  response()->json([
-            'message' => 'Update success'
-        ], 200);
+
+Route::put('posts/{post}', function(Request $request, $postId) {
+    $post = Post::findOrFail($postId);
+    $post->update($request->all());
+    return $post;
 });
-Route::delete('posts/{post}',function() {
-	return  response()->json(null, 204);
+
+
+Route::delete('posts/{post}',function($postId) {
+    Post::find($postId)->delete();
+    return 204;
 });
