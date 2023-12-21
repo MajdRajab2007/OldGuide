@@ -4,20 +4,18 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import "../node_modules/bootstrap/dist/js/bootstrap.min.js"
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import Home from "./components/Home"
+import Login from './Pages/Signup.js';
+import Signup from './Pages/Signup.js';
+import Signin from './Pages/Signin.js';
+
 function App() {
 
-  let [posts, setPosts] = useState([])
 
-  useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/posts").then((res) => res.json()).then((data) => setPosts(data) )
-  },[])
-  console.log(posts)
   return (
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<div>About Page</div>} />
+            <Route path='/signup' element={<Signup />} />
+            <Route path='/signin' element={<Signin />} />
         </Routes>
   );
 }
