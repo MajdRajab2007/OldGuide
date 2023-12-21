@@ -34,10 +34,11 @@
     }
     .logoAct {
         display: block;
-        width: 20%;
-        height: 9%;
+        width: 18%;
+        top: 2px;
         padding: 10px;
         position: absolute;
+        right: 1px;
 
     }
 }

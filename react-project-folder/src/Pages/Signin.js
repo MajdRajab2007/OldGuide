@@ -7,11 +7,11 @@ function Signin() {
 
     return (
         <>
-<img className="mt-5 logoAct" src={logo} alt="sada" />
                                         <div>
                          <div className="login template d-flex vh-100 ms-5 align-items-center w-100  backgroundForForm">
                                         <div className="40-w p-5 rounded  formContainer" style={{height:"70%"}}>
                     <form >
+<img className="mt-5 logoAct " src={logo} alt="sada" />
                         <h3 className="text-center mb-5">تسجيل الدخول</h3>
 
                         <div className="mb-4">
