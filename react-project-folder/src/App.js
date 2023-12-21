@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import "../node_modules/bootstrap/dist/js/bootstrap.min.js"
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Home from "./components/Home"
