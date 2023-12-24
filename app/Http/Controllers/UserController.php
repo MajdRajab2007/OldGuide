@@ -25,6 +25,6 @@ class UserController extends Controller
         
         auth()->login($user);
 
-        return redirect('/');
+        return redirect('http://192.168.1.111:3000');
     }
 }
