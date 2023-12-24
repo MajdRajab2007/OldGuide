@@ -1,20 +1,48 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import "./Signup.css";
 import logo from "../images/logo.png";
 
 function Signup() {
-    const navigate = useNavigate();
+    let [name, setName] = useState("");
+    let navigate = useNavigate();
+    let [lName, setLname] = useState("");
+    let [email, setEmail] = useState("");
+    let [password, setPassword] = useState("");
+    // setEmail("adham@gmail.com")
+    console.log(email);
+    useEffect(() => {
+        fetch("http://127.0.0.1/signup", {
+            method: "POST",
+            headers: {
+                "Content-Type": "Application/json",
+            },
+            body: JSON.stringify({
+                name: name,
+                lName: lName,
+                email: email,
+                password: password,
+            }),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                navigate("http://127.0.0.1/signup");
+            });
+    }, []);
 
     return (
         <>
             <img className="  logoAct" src={logo} alt="sada" />
             <div className="login template d-flex vh-100 ms-5 align-items-center w-100  backgroundForForm">
                 <div className="40-w p-5 rounded  formContainer">
-                    <form method="POST" action="http://127.0.0.1/signup">
+                    <form>
                         <h3 className="text-center">تسجيل حساب جديد</h3>
                         <div className="mb-2 mt-3">
                             <label htmlFor="name">الاسم</label>
                             <input
+                                onChange={(e) => {
+                                    setName(e.target.value);
+                                }}
                                 type="name"
                                 required
                                 minLength="2"
@@ -30,6 +58,9 @@ function Signup() {
                         <div className="mb-2">
                             <label htmlFor="lName">الكنية</label>
                             <input
+                                onChange={(e) => {
+                                    setLname(e.target.value);
+                                }}
                                 type="lName"
                                 required
                                 minLength="2"
@@ -45,6 +76,9 @@ function Signup() {
                         <div className="mb-2">
                             <label htmlFor="email">البريد الإلكتروني</label>
                             <input
+                                onChange={(e) => {
+                                    setEmail(e.target.value);
+                                }}
                                 required
                                 type="email"
                                 placeholder="البريد الإلكتروني"
@@ -58,6 +92,9 @@ function Signup() {
                         <div className="mb-2">
                             <label htmlFor="password">كلمة السر</label>
                             <input
+                                onChange={(e) => {
+                                    setPassword(e.target.value);
+                                }}
                                 type="password"
                                 required
                                 minLength="10"
