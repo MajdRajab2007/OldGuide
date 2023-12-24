@@ -43,3 +43,9 @@ Route::delete('posts/{post}',function($postId) {
     Post::find($postId)->delete();
     return 204;
 });
+
+Route::post('tokens/create', function (Request $request) {
+    $token = $request->user()->createToken($request->token_name);
+ 
+    return ['token' => $token->plainTextToken];
+});

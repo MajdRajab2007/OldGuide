@@ -27,4 +27,5 @@ class UserController extends Controller
 
         return redirect('http://192.168.1.111:3000');
     }
+    
 }

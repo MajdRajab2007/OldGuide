@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="http://192.168.1.111:3000/signin">Main Page</a>
+    <form action="/api/tokens/create" method="POST">
+        <input type="text" name="token_name" id="">
+        <button>Submit</button>
+    </form>
 </body>
 </html>
