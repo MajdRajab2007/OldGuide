@@ -28,5 +28,20 @@ class UserController extends Controller
 
         return redirect('http://192.168.1.111:3000');
     }
+    public function login(Request $request)
+    {
+        $incomingFields = $request->validate([
+            'loginemail' => 'required',
+            'loginpassword' => 'required'
+        ]);
+        if (auth()->attempt(['email' => $incomingFields['loginemail'], 'password' => $incomingFields['loginpassword']])) {
+            return redirect('http://192.168.1.111:3000/');
+        }
+        else {
+
+            return redirect('http://192.168.1.111:3000/signinfalse');
+        }
+        
     
+}
 }

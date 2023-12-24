@@ -28,7 +28,7 @@ function Signin() {
                                     البريد الإلكتروني
                                 </label>
                                 <input
-                                    name="email"
+                                    name="loginemail"
                                     required
                                     type="email"
                                     placeholder="البريد الإلكتروني"
@@ -44,7 +44,7 @@ function Signin() {
                                     كلمة السر
                                 </label>
                                 <input
-                                    name="password"
+                                    name="loginpassword"
                                     type="password"
                                     required
                                     minLength="10"
