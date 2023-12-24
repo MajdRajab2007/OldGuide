@@ -11,8 +11,9 @@ function Signup() {
     let [password, setPassword] = useState("");
     // setEmail("adham@gmail.com")
     console.log(email);
-    useEffect(() => {
-        fetch("http://127.0.0.1/signup", {
+
+    const formSubmit = () => {
+        fetch("http://127.0.0.1:8000/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "Application/json",
@@ -26,16 +27,16 @@ function Signup() {
         })
             .then((res) => res.json())
             .then((data) => {
-                navigate("http://127.0.0.1/signup");
+                navigate("/signin");
             });
-    }, []);
+    };
 
     return (
         <>
             <img className="  logoAct" src={logo} alt="sada" />
             <div className="login template d-flex vh-100 ms-5 align-items-center w-100  backgroundForForm">
                 <div className="40-w p-5 rounded  formContainer">
-                    <form>
+                    <form >
                         <h3 className="text-center">تسجيل حساب جديد</h3>
                         <div className="mb-2 mt-3">
                             <label htmlFor="name">الاسم</label>
@@ -110,6 +111,7 @@ function Signup() {
 
                         <div className="d-grid">
                             <input
+                            onClick={() => formSubmit()}
                                 type="submit"
                                 className="btn btn-youth"
                                 value="تسجيل الحساب"
