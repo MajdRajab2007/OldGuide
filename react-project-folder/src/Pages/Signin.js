@@ -4,6 +4,8 @@ import logo from "../images/logo.png"
 
 function Signin() {
 
+    
+
 
     return (
         <>
@@ -26,7 +28,7 @@ function Signin() {
                         </div>
 
                         <div className="d-grid">
-                            <Link className="btn btn-youth">تسجيل الدخول</Link>
+                            <Link  className="btn btn-youth">تسجيل الدخول</Link>
                         </div>
                         <p className="text-left mt-2">
                             لا تملك حساب؟
