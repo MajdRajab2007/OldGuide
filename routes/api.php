@@ -26,7 +26,7 @@ Route::get('posts', function () {
 Route::get('posts/{post}', function ($postId) {
     return response()->json(Post::find($postId), 200);
 });
- 
+
 Route::post('posts', function(Request $request) {
     $new_post = Post::create($request->all());
     return $new_post;
