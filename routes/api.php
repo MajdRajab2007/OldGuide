@@ -1,7 +1,9 @@
 <?php
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,4 +50,27 @@ Route::post('tokens/create', function (Request $request) {
     $token = $request->user()->createToken($request->token_name);
  
     return ['token' => $token->plainTextToken];
+});
+
+Route::post('users',function(Request $request, User $user){
+    
+    {
+        
+        $incomingFields = $request->validate([
+            'name' => ['required', 'min:2', 'max:10', Rule::unique('users', 'name'), 'alpha'],
+            'lName' => ['required', 'min:2', 'max:10', Rule::unique('users', 'lName'), 'alpha'],
+            'email' => ['required', 'email', Rule::unique('users', 'email')],
+            'password' => ['required', 'min:8', 'max:200'],
+
+        ]);
+
+
+        $incomingFields['password'] = bcrypt($incomingFields['password']);
+
+        $user = User::create($incomingFields);
+        
+        auth()->login($user);
+
+        return redirect('http://192.168.1.111:3000/signin');
+    }
 });

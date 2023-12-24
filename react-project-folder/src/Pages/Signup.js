@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Signup.css";
 import logo from "../images/logo.png";
 
@@ -9,34 +9,36 @@ function Signup() {
     let [lName, setLname] = useState("");
     let [email, setEmail] = useState("");
     let [password, setPassword] = useState("");
+    let [log, setLog] = useState(false)
     // setEmail("adham@gmail.com")
     console.log(email);
+    // const formSubmit = () => {
+    //     fetch("http://127.0.0.1:8000/api/users", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "text/plain",
+    //         },
+    //         body: JSON.stringify({
+    //             name: name,
+    //             lName: lName,
+    //             email: email,
+    //             password: password,
+    //         }),
+    //     })
+    //         .then((res) => res.json())
+    //         .then((data) => {
+    //             navigate("/signin");
+    //         });
+    // };
 
-    const formSubmit = () => {
-        fetch("http://127.0.0.1:8000/signup", {
-            method: "POST",
-            headers: {
-                "Content-Type": "Application/json",
-            },
-            body: JSON.stringify({
-                name: name,
-                lName: lName,
-                email: email,
-                password: password,
-            }),
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                navigate("/signin");
-            });
-    };
+            
 
     return (
         <>
             <img className="  logoAct" src={logo} alt="sada" />
             <div className="login template d-flex vh-100 ms-5 align-items-center w-100  backgroundForForm">
                 <div className="40-w p-5 rounded  formContainer">
-                    <form >
+                    <form  action="http://127.0.0.1:8000/api/users" method="POST">
                         <h3 className="text-center">تسجيل حساب جديد</h3>
                         <div className="mb-2 mt-3">
                             <label htmlFor="name">الاسم</label>
@@ -44,6 +46,7 @@ function Signup() {
                                 onChange={(e) => {
                                     setName(e.target.value);
                                 }}
+                                name="name"
                                 type="name"
                                 required
                                 minLength="2"
@@ -62,6 +65,7 @@ function Signup() {
                                 onChange={(e) => {
                                     setLname(e.target.value);
                                 }}
+                                name="lName"
                                 type="lName"
                                 required
                                 minLength="2"
@@ -82,6 +86,7 @@ function Signup() {
                                 }}
                                 required
                                 type="email"
+                                name="email"
                                 placeholder="البريد الإلكتروني"
                                 className="form-control"
                             />
@@ -98,6 +103,7 @@ function Signup() {
                                 }}
                                 type="password"
                                 required
+                                name="password"
                                 minLength="10"
                                 maxLength="28"
                                 placeholder="كلمة السر"
@@ -111,7 +117,7 @@ function Signup() {
 
                         <div className="d-grid">
                             <input
-                            onClick={() => formSubmit()}
+                            
                                 type="submit"
                                 className="btn btn-youth"
                                 value="تسجيل الحساب"
