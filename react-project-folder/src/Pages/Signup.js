@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import "./Signup.css"
 import logo from "../images/logo.png"
 
+
+
 function Signup() {
+
+    const navigate = useNavigate()
 
 
     return (
@@ -34,10 +38,10 @@ function Signup() {
                         </div>
 
                         <div className="d-grid">
-                            <Link className="btn btn-youth">تسجيل الحساب</Link>
+                            <Link className="btn btn-youth"  >تسجيل الحساب</Link>
                         </div>
                         <p className="text-left mt-2">
-                             <Link  className="me-2" to="/signin" style={{fontWeight:"bold"}}>لدي حساب</Link>
+                             <Link  className="me-2" style={{fontWeight:"bold"}}>لدي حساب</Link>
                         </p>
                     </form>
                     </div>
