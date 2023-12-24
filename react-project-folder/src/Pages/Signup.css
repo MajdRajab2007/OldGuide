@@ -57,3 +57,11 @@
     background-color: #0172AF;
     color: #eee;
 }
+.wrongData {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 3px 5px;
+}

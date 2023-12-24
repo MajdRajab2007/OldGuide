@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./Signup.css";
 import logo from "../images/logo.png";
 
-function Signin() {
+function Signinfalse() {
 
     return (
         <>
@@ -59,7 +59,7 @@ function Signin() {
                             </div>
 
                             <div className="d-grid">
-                                <input className="btn btn-youth" type="submit" value="تسجيل الدخول"/>
+                            <input className="btn btn-youth" type="submit" value="تسجيل الدخول"/>
                             </div>
                             <p className="text-left mt-2">
                                 لا تملك حساب؟
@@ -68,6 +68,7 @@ function Signin() {
                                 </Link>
                             </p>
                         </form>
+                        <p className="wrongData">البيانات المدخلة غير صحيحة</p>
                     </div>
                 </div>
             </div>
@@ -75,4 +76,4 @@ function Signin() {
     );
 }
 
-export default Signin;
+export default Signinfalse;
