@@ -1,7 +1,7 @@
 .formContainer {
     width: 30%;
     height: 70%;
-    margin-left: 3%;
+    margin-left: 13%;
     background-color: transparent;
     border: 1px solid #0172AF;
     color: #0172AF;
@@ -50,7 +50,7 @@
 .backgroundForForm {
     background: url("../images/background.jpg") no-repeat;
     background-size: cover;
-    
+
     justify-content: left;
 
 }
