@@ -1,0 +1,129 @@
+.aboutus {
+    background-image: url("../images/aboutusback.jpg");
+    min-height: 97vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+
+.whous {
+    background-color: #09dbbe;
+    color: #eee;
+    font-weight: bold;
+    padding: 4px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin-right: 15% !important;
+    height: 65%;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+
+ .headOfAbout {
+
+ }
+
+.teamlogo {
+    /* padding: 10%; */
+    width: 70px;
+    height: 70px;
+}
+.defineWhoAreUs {
+    width: 50%; padding: 15px;
+    text-align: right;
+    margin-right: 25% !important;
+    font-size: 17px;
+}
+@media (max-width: 700px) {
+    .teamlogo{
+        padding: 10px;
+    }
+    .whous {
+        margin-top: auto;
+        width: 45%;
+        margin-right: 4% !important;
+    }
+    .defineWhoAreUs {
+        width: 70%;
+        font-size: 14px;
+        margin-right: 18% !important;
+    }
+    .backHome {
+        top: 50%;
+        width: 18%;
+        height: 4%;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.aboutText {
+    background-color: #09dbbe;
+    width: 80%;
+    color: #eee;
+    border: 2px solid #eee;
+    font-weight: bold;
+    padding: 10px 14px;
+    line-height: 2.7;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.aboutText:hover {
+    border: 2px solid #09dbbe;
+    background-color: #eee;
+    color: #09dbbe;
+    width: 90%;
+    cursor:grab;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.cardAbout {
+    justify-content: center;
+    display: flex;
+
+}
+.backHome {
+    background-color: #1292ad;
+    width: 10%;
+    position: absolute;
+    top:  2%;
+    left: 2%;
+    font-weight: bold;
+    color: #eee;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+.backHome:hover {
+    background-color: #eee;
+    color: #1292ad;
+    border: 2px solid #1292ad;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}

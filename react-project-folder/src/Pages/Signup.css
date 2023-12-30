@@ -39,8 +39,8 @@
     }
     .logoAct {
         display: block;
-        width: 18%;
         top: 2px;
+        width: 18%;
         padding: 10px;
         position: absolute;
         right: 1px;
@@ -50,6 +50,7 @@
 .backgroundForForm {
     background: url("../images/background.jpg") no-repeat;
     background-size: cover;
+    
     justify-content: left;
 
 }
@@ -64,4 +65,7 @@
     font-size: 18px;
     margin-top: 20px;
     padding: 3px 5px;
+}
+.form-control {
+    border-bottom: 2px solid #09dbbe;
 }

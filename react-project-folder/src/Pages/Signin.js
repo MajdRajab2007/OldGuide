@@ -3,6 +3,7 @@ import "./Signup.css";
 import logo from "../images/logo.png";
 
 function Signin() {
+    
 
     return (
         <>
@@ -21,7 +22,7 @@ function Signin() {
                                 src={logo}
                                 alt="sada"
                             />
-                            <h3 className="text-center mb-5">تسجيل الدخول</h3>
+                            <h3  className="text-center mb-5">تسجيل الدخول</h3>
 
                             <div className="mb-4">
                                 <label htmlFor="email" className="mb-2">
