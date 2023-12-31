@@ -44,7 +44,7 @@ function Navbar() {
                                 <Link
                                     className="nav-link active"
                                     aria-current="page"
-                                    to="/"
+                                    to="/our-services"
                                     style={{color:"#eee"}}
                                 >
                                       خدماتنا
@@ -65,7 +65,7 @@ function Navbar() {
                                 style={{color:"#eee"}}
                                     className="nav-link active"
                                     aria-current="page"
-                                    to="/"
+                                    to="/contact-us"
                                 >
                                       تواصل معنا
                                 </Link>

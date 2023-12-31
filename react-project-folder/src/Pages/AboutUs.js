@@ -18,9 +18,6 @@ function AboutUs() {
 
                         </div>
                         <div className="col-7" style={{display:"flex", alignItems:"center"}}><p className="whous ">من نحن؟</p></div>
-                    {/* <div className="col-1 me-auto">
-                            <Link to="/" className="btn backHome">الصفحة الرئيسية</Link>
-                    </div> */}
                     </div>
                         <h4 className="col-12 mt-4 defineWhoAreUs ms-4">دليل الشباب: شركة برمجية ناشئة تهدف لخلق المهارات البرمجية عن طريق مبدأ تدريب اليافعين بالفياعفين أنفسهم</h4>
                     <div className="row mt-3">

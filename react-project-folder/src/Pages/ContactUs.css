@@ -1,0 +1,92 @@
+.contactcard {
+    background-color: #09dbbe;
+    width: 54%;
+    min-height: 40vh;
+    position: relative;
+    margin-right: 24%;
+    padding: 10px 12px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    box-shadow: 4px 7px 18px 0px black;
+}
+.linkcontact {
+    padding: 14px;
+    text-align: right;
+    min-width: 230px;
+    font-weight: bold;
+}
+.socialmediaContact {
+    width: 30%;
+    margin-right: 35%;
+    text-align: center;
+    font-weight: bold;
+}
+.socialIcon {
+    margin: 8px;
+}
+@media (max-width: 758px) {
+    .contactcard {
+        width: 70%;
+        margin-right: 17%;
+    }
+    .backHome {
+        padding: 16px 12px;
+    }
+    .before::before {
+        left: 6% !important;
+    }
+    .before::after {
+        right: 6% !important;
+    }
+    .socialmediaContact {
+        width: 60%;
+        margin-right: 20%;
+    }
+}
+.before::before {
+    content: "";
+    width: 2px;
+    height: 74%;
+    left: 26%;
+    top: 15%;
+    background-color: black;
+    position: absolute;
+
+
+}
+.before::after {
+    content: "";
+    width: 2px;
+    height: 74%;
+    right: 26%;
+    top: 15%;
+    background-color: black;
+    position: absolute;
+
+
+}
+
+@media (min-width: 701px) and (max-width: 991px) {
+    .before::after {
+        right: 20%;
+    }
+    .before::before {
+        left: 20%;
+    }
+
+}
+.socialIcon {
+    font-size: 40px;
+}
+.iconsForContact {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
